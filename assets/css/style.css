@@ -20,12 +20,24 @@
   --weight-regular: 400;
 
   /* Size */
+  --card-radius: 50px;
   --btn-radius: 50px;
   --input-radius: 20px;
   --title-letter-spacing: -0.05em;
 }
 
 /* Typography */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
 h1 {
   font-size: var(--size-large);
   letter-spacing: var(--title-letter-spacing);
@@ -56,3 +68,16 @@ input {
   border-radius: var(--input-radius);
 }
 
+/* Card */
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 630px;
+  height: 830px;
+  background-color: var(--color-blue);
+  border-radius: var(--card-radius);
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.24);
+  padding: 47px 49px;
+}
