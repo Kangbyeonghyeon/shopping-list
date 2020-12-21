@@ -1,0 +1,23 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #fff;
+  --color-blue: #308FFF;
+  --color-grey: #7E7D7D;
+  --color-light-gre: #B9B9B9;
+
+  /* Font Family */
+  --font-lato: 'Lato', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+
+  /* Font size */
+  --size-large: 42px;
+  --size-medium: 24px;
+  --size-regular: 18px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-regular: 400;
+
+  /* Size */
+}
