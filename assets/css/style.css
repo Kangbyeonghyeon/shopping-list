@@ -20,4 +20,39 @@
   --weight-regular: 400;
 
   /* Size */
+  --btn-radius: 50px;
+  --input-radius: 20px;
+  --title-letter-spacing: -0.05em;
 }
+
+/* Typography */
+h1 {
+  font-size: var(--size-large);
+  letter-spacing: var(--title-letter-spacing);
+  color: var(--color-white);
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-white);
+  border-radius: var(--btn-radius);
+}
+
+input {
+  outline: none;
+  border: none;
+  border-radius: var(--input-radius);
+}
+
