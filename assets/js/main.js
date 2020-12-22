@@ -12,6 +12,10 @@ const ITEM_LS = 'item',
 
 const items = [];
 
+function saveItem(text) {
+  localStorage.setItem(ITEM_LS, JSON.stringify(text));
+}
+
 function paintItem(text) {
   const list = document.createElement('li');
   const span = document.createElement('span');
@@ -31,7 +35,7 @@ function paintItem(text) {
     id: newId
   }
   items.push(itemsObj);
-  console.log(items);
+  saveItem(items);
 }
 
 function handleSubmit(e) {
