@@ -48,7 +48,10 @@ function handleSubmit(e) {
 function loadItems() {
   const loadedItems = localStorage.getItem(ITEM_LS);
   if(loadedItems !== null) {
-
+    const parseItems = JSON.parse(loadedItems);
+    parseItems.forEach(function(item) {
+      paintItem(item.text);
+    });
   }
 }
 
