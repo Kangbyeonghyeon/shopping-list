@@ -25,7 +25,6 @@
   --input-radius: 20px;
   --item-radius: 12px;
   --title-letter-spacing: -0.05em;
-
 }
 
 /* Typography */
@@ -103,7 +102,6 @@ input {
 
 .list {
   display: flex;
-  margin-bottom : 13.53px;
 }
 
 .list__item {
@@ -116,6 +114,7 @@ input {
   margin-right: 21px;
   color: var(--color-grey);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom : 13.53px;
 }
 
 .list__del-btn {
@@ -136,7 +135,7 @@ input {
   padding: 0 22.39px;
   font-size: var(--size-medium);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-  margin-right: 39.33px;
+  margin-right: 25px;
 }
 
 .shopping-form__input::-webkit-input-placeholder { 

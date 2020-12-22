@@ -1,15 +1,44 @@
 'use strict'
 
-const itemForm = document.querySelector('.shopping-form'),
+const shoppingList = document.querySelector('.lists'), 
+  itemForm = document.querySelector('.shopping-form'),
   itemInput = itemForm.querySelector('.shopping-form__input'),
   itemAddBtn = itemForm.querySelector('.shopping-form__add-btn');
 
-const ITEM_LS = 'item';
+const ITEM_LS = 'item',
+  LIST_CN = 'list',
+  LIST_ITEM_CN = 'list__item',
+  DEL_BTN_CN = 'list__del-btn';
+
+const items = [];
+
+function paintItem(text) {
+  const list = document.createElement('li');
+  const span = document.createElement('span');
+  const delBtn = document.createElement('button');
+  const newId = items.length + 1;
+  list.setAttribute('class', LIST_CN);
+  list.id = newId;
+  span.textContent = text;
+  span.setAttribute('class', LIST_ITEM_CN);
+  delBtn.innerHTML = '<i class="fas fa-minus"></i>';
+  delBtn.setAttribute('class', DEL_BTN_CN);
+  list.appendChild(span);
+  list.appendChild(delBtn);
+  shoppingList.appendChild(list);
+  const itemsObj = {
+    text: text,
+    id: newId
+  }
+  items.push(itemsObj);
+  console.log(items);
+}
 
 function handleSubmit(e) {
   e.preventDefault();
   const currentValue = itemInput.value;
-  paintItem(curentValue);
+  paintItem(currentValue);
+  itemInput.value = '';
 }
 
 function loadItems() {
