@@ -48,6 +48,9 @@ function paintItem(text) {
   }
   items.push(itemsObj);
   saveItem(items);
+  list.scrollIntoView({
+    block: 'center'
+  });
 }
 
 function handleSubmit(e) {
