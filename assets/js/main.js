@@ -70,6 +70,7 @@ function loadItems() {
 function init() {
   loadItems();
   itemForm.addEventListener('submit', handleSubmit);
+  itemAddBtn.addEventListener('click', handleSubmit);
 }
 
 init();
