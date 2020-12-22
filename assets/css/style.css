@@ -4,7 +4,7 @@
   --color-white: #fff;
   --color-blue: #308FFF;
   --color-grey: #7E7D7D;
-  --color-light-gre: #B9B9B9;
+  --color-light-grey: #B9B9B9;
 
   /* Font Family */
   --font-lato: 'Lato', sans-serif;
@@ -80,7 +80,7 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 630px;
-  height: 830px;
+  min-height: 810px;
   background-color: var(--color-blue);
   border-radius: var(--card-radius);
   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.24);
@@ -95,6 +95,12 @@ input {
 }
 
 /* Shopping Lists */
+.lists {
+  height: 550px;
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+
 .list {
   display: flex;
   margin-bottom : 13.53px;
@@ -116,4 +122,46 @@ input {
   width: 40px;
   height: 40px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+.shoppig-form {
+  display: flex;
+  align-items: center;
+}
+
+.shopping-form__input {
+  width: 443px;
+  line-height: 74px;
+  padding: 0 22.39px;
+  font-size: var(--size-medium);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  margin-right: 39.33px;
+}
+
+.shopping-form__input::-webkit-input-placeholder { 
+  /* Chrome/Opera/Safari */
+  color: var(--color-light-grey);
+}
+
+.shopping-form__input::-moz-placeholder { 
+  /* Firefox 19+ */
+  color: var(--color-light-grey);
+}
+
+.shopping-form__input:-ms-input-placeholder { 
+  /* IE 10+ */
+  color: var(--color-light-grey);
+}
+
+.shopping-form__input:-moz-placeholder { 
+  /* Firefox 18- */
+  color: var(--color-light-grey);
+}
+
+.shopping-form__add-btn {
+  width: 60px;
+  height: 60px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-size: var(--size-regular);
 }
