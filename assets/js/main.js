@@ -10,7 +10,18 @@ const ITEM_LS = 'item',
   LIST_ITEM_CN = 'list__item',
   DEL_BTN_CN = 'list__del-btn';
 
-const items = [];
+let items = [];
+
+function deleteItem(e) {
+  const target = e.currentTarget;
+  const list = target.parentNode;
+  shoppingList.removeChild(list);
+  const cleanItem = items.filter(function(item) {
+    return parseInt(list.id) !== item.id;
+  });
+  items = cleanItem;
+  saveItem(items);
+}
 
 function saveItem(text) {
   localStorage.setItem(ITEM_LS, JSON.stringify(text));
@@ -27,6 +38,7 @@ function paintItem(text) {
   span.setAttribute('class', LIST_ITEM_CN);
   delBtn.innerHTML = '<i class="fas fa-minus"></i>';
   delBtn.setAttribute('class', DEL_BTN_CN);
+  delBtn.addEventListener('click', deleteItem);
   list.appendChild(span);
   list.appendChild(delBtn);
   shoppingList.appendChild(list);
