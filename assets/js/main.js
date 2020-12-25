@@ -56,8 +56,12 @@ function paintItem(text) {
 function handleSubmit(e) {
   e.preventDefault();
   const currentValue = itemInput.value;
-  paintItem(currentValue);
   itemInput.value = '';
+  if(currentValue === '') {
+    return;
+  } else {
+    paintItem(currentValue);
+  }
 }
 
 function loadItems() {
